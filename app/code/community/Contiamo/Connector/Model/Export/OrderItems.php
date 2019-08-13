@@ -26,15 +26,7 @@ class Contiamo_Connector_Model_Export_OrderItems extends Contiamo_Connector_Mode
 
     public static function customAttributes()
     {
-        $customAttributes = Mage::getStoreConfig('contiamo_settings/sale_item_attributes');
-        $sorter = function($a, $b) {
-          $a = intval(str_replace('custom_', '', $a));
-          $b = intval(str_replace('custom_', '', $b));
-          return $a - $b;
-        };
-        uksort($customAttributes, $sorter);
-
-        return $customAttributes;
+        return Mage::helper('contiamo')->getSettings('sale_item_attributes');
     }
 
     public function init($dateFrom, $pageNum, $pageSize)

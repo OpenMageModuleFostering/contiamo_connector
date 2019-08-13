@@ -1,20 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>Contiamo_Connector</name>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
     <extends/>
     <summary>Use Contiamo to analyze your sale trends and customer base.</summary>
     <description>Use Contiamo to analyze your sale trends and customer base.</description>
-    <notes>Added support for user defined attributes in the export.&#xD;
-&#xD;
-Minor: Include "name" in order item export. </notes>
+    <notes>Minor: fix custom attribute fetching when all values are empty</notes>
     <authors><author><name>Chris Baynes</name><user>contiamo</user><email>info@contiamo.com</email></author></authors>
-    <date>2015-02-11</date>
-    <time>16:57:13</time>
-    <contents><target name="magecommunity"><dir name="Contiamo"><dir name="Connector"><dir name="Helper"><file name="Data.php" hash="e354215a2c6bbb79c4d83c49f4bb7e65"/></dir><dir name="Model"><dir name="Admin"><file name="AbstractSource.php" hash="649e273afe1ed9833eaa93c3c9dd9ce0"/><file name="CustomerSource.php" hash="832645ffd3dfc57e0d98ad83325ece02"/><file name="SaleItemSource.php" hash="3d24b9f71dee66d0b3f91c25deec6dc4"/><file name="SaleSource.php" hash="e6a42a4efe291823d2b3cd5cb38c7518"/></dir><file name="Contiamo.php" hash="7ed0a780d45c090cdd5af6738830ac62"/><dir name="Export"><file name="Collection.php" hash="2ca6280af2cdd7412e9f9bbdc04be6b1"/><file name="CustomAttributes.php" hash="3d798281b48857947316642e86fdd584"/><file name="Customer.php" hash="2b31447c49506f07b42d968619cab062"/><file name="Customers.php" hash="3d8c29a0bccc29e08e314c6c02396b19"/><file name="Order.php" hash="882fe4101b27df47036ab0d565a5b36b"/><file name="OrderItem.php" hash="56249ebb4dce0f77da92a14268128ee0"/><file name="OrderItems.php" hash="a6e7dac5289196e79275e768b076024b"/><file name="OrderUpdates.php" hash="0bba8474dfa37f09a8f55216e1985cd4"/><file name="Orders.php" hash="bf6893fedb3739842bb72e95a70e360a"/><file name="Status.php" hash="9f2fb6a8241a071168dddf726c988878"/></dir><dir name="Resource"><dir name="Mysql4"><file name="Setup.php" hash="3d4b6ecfc461825f115eb6dc8ba3677f"/></dir></dir></dir><dir name="controllers"><file name="ExportController.php" hash="2a6fe5fece69bfbf9395b61e1b91a4bb"/></dir><dir name="etc"><file name="adminhtml.xml" hash="70f5bf8121d1a276e649b9b5fb4ac9cc"/><file name="config.xml" hash="86265a601408ff8aec600e04e347dd6b"/><file name="system.xml" hash="c1aaa3061a5e8fc4ba3ac66a0f408c58"/></dir><dir name="sql"><dir name="contiamo_setup"><file name="mysql4-install-0.0.1.php" hash="8b799197fe5d2567f1510b0777b137b1"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Contiamo_Connector.xml" hash="54eb6cba356dc238f94212376cbd86c1"/></dir></target></contents>
+    <date>2015-02-17</date>
+    <time>11:23:32</time>
+    <contents><target name="magecommunity"><dir name="Contiamo"><dir name="Connector"><dir name="Helper"><file name="Data.php" hash="0b7005dfbd871a92c54f5a66201cde27"/></dir><dir name="Model"><dir name="Admin"><file name="AbstractSource.php" hash="649e273afe1ed9833eaa93c3c9dd9ce0"/><file name="CustomerSource.php" hash="832645ffd3dfc57e0d98ad83325ece02"/><file name="SaleItemSource.php" hash="3d24b9f71dee66d0b3f91c25deec6dc4"/><file name="SaleSource.php" hash="e6a42a4efe291823d2b3cd5cb38c7518"/></dir><file name="Contiamo.php" hash="7ed0a780d45c090cdd5af6738830ac62"/><dir name="Export"><file name="Collection.php" hash="2ca6280af2cdd7412e9f9bbdc04be6b1"/><file name="CustomAttributes.php" hash="3d798281b48857947316642e86fdd584"/><file name="Customer.php" hash="2b31447c49506f07b42d968619cab062"/><file name="Customers.php" hash="105a08c13f7034f0d8bb6f8212fcdda3"/><file name="Order.php" hash="882fe4101b27df47036ab0d565a5b36b"/><file name="OrderItem.php" hash="56249ebb4dce0f77da92a14268128ee0"/><file name="OrderItems.php" hash="1be1dbbd461d0b5604abce6b283c14f2"/><file name="OrderUpdates.php" hash="0bba8474dfa37f09a8f55216e1985cd4"/><file name="Orders.php" hash="1a9d572b76704b58a1d588ef29ae35dd"/><file name="Status.php" hash="9f2fb6a8241a071168dddf726c988878"/></dir><dir name="Resource"><dir name="Mysql4"><file name="Setup.php" hash="3d4b6ecfc461825f115eb6dc8ba3677f"/></dir></dir></dir><dir name="controllers"><file name="ExportController.php" hash="2a6fe5fece69bfbf9395b61e1b91a4bb"/></dir><dir name="etc"><file name="adminhtml.xml" hash="70f5bf8121d1a276e649b9b5fb4ac9cc"/><file name="config.xml" hash="a2319c9c4ec7032aba4d9ec3388b918a"/><file name="system.xml" hash="c1aaa3061a5e8fc4ba3ac66a0f408c58"/></dir><dir name="sql"><dir name="contiamo_setup"><file name="mysql4-install-0.0.1.php" hash="8b799197fe5d2567f1510b0777b137b1"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Contiamo_Connector.xml" hash="54eb6cba356dc238f94212376cbd86c1"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
