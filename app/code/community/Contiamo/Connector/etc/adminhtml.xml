@@ -1,0 +1,27 @@
+<config>
+  <acl>
+    <resources>
+      <all>
+        <title>Allow Everything</title>
+      </all>
+      <admin>
+        <children>
+          <contiamo translate="title" module="contiamo">
+            <title>Contiamo</title>
+          </contiamo>
+          <system>
+            <children>
+              <config>
+                <children>
+                  <contiamo_settings>
+                    <title>contiamo</title>
+                  </contiamo_settings>
+                </children>
+              </config>
+            </children>
+          </system>
+        </children>
+      </admin>
+    </resources>
+  </acl>
+</config>

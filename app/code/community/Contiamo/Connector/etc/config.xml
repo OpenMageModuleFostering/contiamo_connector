@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Contiamo_Connector>
+      <version>1.0.0</version>
+    </Contiamo_Connector>
+  </modules>
+
+  <global>
+    <models>
+      <contiamo>
+        <class>Contiamo_Connector_Model</class>
+      </contiamo>
+    </models>
+    <helpers>
+      <contiamo>
+        <class>Contiamo_Connector_Helper</class>
+      </contiamo>
+    </helpers>
+    <resources>
+      <contiamo_setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+        <setup>
+          <module>Contiamo_Connector</module>
+          <class>Contiamo_Connector_Model_Resource_Mysql4_Setup</class>
+        </setup>
+      </contiamo_setup>
+      <contiamo_read>
+        <connection>
+          <use>core_read</use>
+        </connection>
+      </contiamo_read>
+      <contiamo_write>
+        <connection>
+          <use>core_write</use>
+        </connection>
+      </contiamo_write>
+    </resources>
+    <blocks>
+        <contiamo><class>Contiamo_Connector_Block</class></contiamo>
+    </blocks>
+  </global>
+
+  <frontend>
+    <routers>
+      <contiamo>
+        <use>standard</use>
+        <args>
+          <module>Contiamo_Connector</module>
+          <frontName>contiamo</frontName>
+        </args>
+      </contiamo>
+    </routers>
+  </frontend>
+</config>

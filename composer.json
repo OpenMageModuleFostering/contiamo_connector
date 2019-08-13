@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Contiamo_Connector",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Use Contiamo to analyze your sale trends and customer base.",
+    "authors": [
+    {
+        "name": "Chris Baynes",
+        "email": "info@contiamo.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
