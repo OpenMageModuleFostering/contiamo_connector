@@ -24,7 +24,7 @@ class Contiamo_Connector_Model_Export_Orders extends Contiamo_Connector_Model_Ex
 
         // discount codes
         'discount_code' => 'coupon_code',
-        'discount_name' => '',
+        'discount_name' => 'coupon_name',
 
         // billing address
         'billing_address_postal_code'   => 'billing_address_postcode',

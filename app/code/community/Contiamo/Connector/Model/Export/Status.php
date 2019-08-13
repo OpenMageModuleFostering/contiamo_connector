@@ -10,7 +10,8 @@ class Contiamo_Connector_Model_Export_Status
             'order_count'       => $this->_orders->getSize(),
             'order_items_count' => $this->_orderItems->getSize(),
             'customer_count'    => $this->_customers->getSize(),
-            'version'           => Mage::helper('contiamo')->getVersion()
+            'version'           => Mage::helper('contiamo')->getVersion(),
+            'mage_version'      => Mage::getVersion()
         );
 
         $header = array_keys($data);

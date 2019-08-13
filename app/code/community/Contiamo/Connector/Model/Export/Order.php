@@ -31,6 +31,20 @@ class Contiamo_Connector_Model_Export_Order
             case 'contiamo_state':
                 return self::$_orderStateMap[$this->order->getState()];
 
+            case 'coupon_name':
+                if ($code = $this->order->getCouponCode()) {
+                    if (version_compare(Mage::getVersion(), '1.4.1', '>=')) {
+                        $coupon = Mage::getModel('salesrule/coupon')->load($code, 'code');
+                        $rule = Mage::getModel('salesrule/rule')->load($coupon->getRuleId());
+                        return $rule->getName();
+
+                    } else {
+                        $rule = Mage::getModel('salesrule/rule')->load($code, 'coupon_code');
+                        return $rule->getName();
+                    }
+                }
+                return '';
+
             case 'payment_method':
                 return $this->order->getPayment()->getMethod();
 
