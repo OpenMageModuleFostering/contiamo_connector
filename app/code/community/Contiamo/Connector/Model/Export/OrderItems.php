@@ -18,10 +18,11 @@ class Contiamo_Connector_Model_Export_OrderItems extends Contiamo_Connector_Mode
         'qty'                   => 'qty_ordered',
 
         // metrics
-        'gross_total'       => 'row_total',
+        'gross_total'       => 'row_total_incl_tax',
         'tax_total'         => 'tax_amount',
-        'net_total'         => 'subtotal',
-        'discount_total'    => 'discount_amount'
+        'net_total'         => 'row_total',
+        'discount_total'    => 'discount_amount',
+        'product_cost'      => 'product_cost'
     );
 
     public static function customAttributes()

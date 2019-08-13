@@ -31,6 +31,10 @@ class Contiamo_Connector_Model_Export_OrderItem
                 $category = $this->getCategory(1);
                 return $category ? $category->getName() : '';
 
+            case 'product_cost':
+                $cost = $this->product->getCost();
+                return $cost ? $cost * $this->orderItem->getQtyOrdered() : '';
+
             default:
                 return $this->orderItem->getData($field);
         }
