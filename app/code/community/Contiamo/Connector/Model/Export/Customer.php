@@ -24,7 +24,25 @@ class Contiamo_Connector_Model_Export_Customer
 
             case 'newsletter_subscribed':
                 $subscriber = Mage::getModel('newsletter/subscriber')->loadByEmail($this->customer->getEmail());
-                return Mage_Newsletter_Model_Subscriber::STATUS_SUBSCRIBED == $subscriber->getSubscriberStatus();
+
+                // Use the same mapping used in the Newsletter/Subscriber/Grid
+                switch ($subscriber->getStatus()) {
+                    case Mage_Newsletter_Model_Subscriber::STATUS_NOT_ACTIVE:
+                        return Mage::helper('newsletter')->__('Not Activated');
+
+                    case Mage_Newsletter_Model_Subscriber::STATUS_SUBSCRIBED:
+                        return Mage::helper('newsletter')->__('Subscribed');
+
+                    case Mage_Newsletter_Model_Subscriber::STATUS_UNSUBSCRIBED:
+                        return Mage::helper('newsletter')->__('Unsubscribed');
+
+                    case Mage_Newsletter_Model_Subscriber::STATUS_UNCONFIRMED:
+                        return Mage::helper('newsletter')->__('Unconfirmed');
+
+                    default:
+                        // In any other case return a default
+                        return 'Other';
+                }
 
             default:
                 return $this->customer->getData($field);
