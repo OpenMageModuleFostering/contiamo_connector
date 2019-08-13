@@ -11,7 +11,7 @@ class Contiamo_Connector_Model_Export_Collection extends Mage_Core_Model_Abstrac
         // memoize
         if ($this->_exportData) return $this->_exportData;
 
-        $itemAttrs = static::$_itemAttributes;
+        $itemAttrs = $this->_itemAttributes();
 
         // set header row
         $this->_exportData = array(array_keys($itemAttrs));
@@ -24,13 +24,29 @@ class Contiamo_Connector_Model_Export_Collection extends Mage_Core_Model_Abstrac
             $exportItem = $this->_exportItem($item);
 
             // add item value for each attribute
-            foreach ($itemAttrs as $attr) {
-                $itemData[] = $exportItem->getData($attr);
+            foreach ($itemAttrs as $attrKey => $attr) {
+                if (!$attr) {
+                    $itemData[] = '';
+                    continue;
+                }
+
+                if (substr($attrKey, 0, 7) === 'custom_') {
+                    // get a custom attribute
+                    $itemData[] = $exportItem->getCustomData($attr);
+                } else {
+                    $itemData[] = $exportItem->getData($attr);
+                }
             }
 
             $this->_exportData[] = $itemData;
         }
 
         return $this->_exportData;
+    }
+
+    protected function _itemAttributes()
+    {
+        $customAttributes = static::customAttributes();
+        return array_merge(static::$_fixedItemAttributes, $customAttributes);
     }
 }

@@ -2,7 +2,7 @@
 
 class Contiamo_Connector_Model_Export_OrderUpdates extends Contiamo_Connector_Model_Export_Collection
 {
-    protected static $_itemAttributes = array(
+    protected static $_fixedItemAttributes = array(
         // unique references
         'sale_reference' => 'increment_id',
 
@@ -10,6 +10,10 @@ class Contiamo_Connector_Model_Export_OrderUpdates extends Contiamo_Connector_Mo
         'sale_status'   => 'contiamo_state',
         'custom_status' => 'status'
     );
+
+    public static function customAttributes() {
+        return array();
+    }
 
     public function init($dateFrom, $pageNum, $pageSize)
     {

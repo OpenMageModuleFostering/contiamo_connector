@@ -2,7 +2,7 @@
 
 class Contiamo_Connector_Model_Export_Customers extends Contiamo_Connector_Model_Export_Collection
 {
-    protected static $_itemAttributes = array(
+    protected static $_fixedItemAttributes = array(
         'user_reference'        => 'entity_id',
         'signup_date'           => 'created_at',
         'email'                 => 'email',
@@ -12,10 +12,23 @@ class Contiamo_Connector_Model_Export_Customers extends Contiamo_Connector_Model
         'newsletter_subscribed' => 'newsletter_subscribed'
     );
 
+    public static function customAttributes()
+    {
+        $customAttributes = Mage::getStoreConfig('contiamo_settings/customer_attributes');
+        $sorter = function($a, $b) {
+          $a = intval(str_replace('custom_', '', $a));
+          $b = intval(str_replace('custom_', '', $b));
+          return $a - $b;
+        };
+        uksort($customAttributes, $sorter);
+
+        return $customAttributes;
+    }
+
     public function init($dateFrom, $pageNum, $pageSize)
     {
         $this->_items = Mage::getModel('customer/customer')->getCollection()
-            ->addAttributeToSelect(array('dob', 'gender'))
+            ->addAttributeToSelect('*')
             ->setCurPage($pageNum)
             ->setPageSize($pageSize);
 

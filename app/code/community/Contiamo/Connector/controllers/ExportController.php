@@ -78,6 +78,20 @@ class Contiamo_Connector_ExportController extends Mage_Core_Controller_Front_Act
         }
     }
 
+    public function customAttributesAction()
+    {
+        try {
+            $this->_authorize();
+
+            $attributes = Mage::getModel('contiamo/export_customAttributes');
+            $response = $attributes->export();
+
+            $this->_respondCsv($response);
+        } catch (Exception $e) {
+            $this->_logEx($e);
+        }
+    }
+
     public function statusAction()
     {
         try {

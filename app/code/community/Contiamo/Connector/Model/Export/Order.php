@@ -46,4 +46,9 @@ class Contiamo_Connector_Model_Export_Order
                 return $this->order->getData($field);
         }
     }
+
+    public function getCustomData($field)
+    {
+        return $this->order->getData($field);
+    }
 }

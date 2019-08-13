@@ -43,4 +43,26 @@ class Contiamo_Connector_Model_Export_OrderItem
         $catId = $this->categoryIds[$index];
         return Mage::getModel('catalog/category')->load($catId);
     }
+
+    public function getCustomData($field)
+    {
+        $data = $this->product->getData($field);
+
+        if ($dataVal = $this->_getAttributeData($field, $data)) {
+            $data = $dataVal;
+        }
+
+        return $data;
+    }
+
+    private function _getAttributeData($field, $id)
+    {
+        if (preg_match('/^[0-9,]+$/', $id)) {
+            $val = $this->product->getAttributeText($field);
+            if (is_array($val)) {
+                return implode(',', $val);
+            }
+            return $val;
+        }
+    }
 }

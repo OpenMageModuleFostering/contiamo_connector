@@ -43,6 +43,306 @@
             </secret_key>
           </fields>
         </general>
+        <sale_item_attributes translate="label">
+          <label>Sale Item Attributes</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>20</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <custom_1 translate="label">
+              <label>Custom 1</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>0</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_1>
+            <custom_2 translate="label">
+              <label>Custom 2</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_2>
+            <custom_3 translate="label">
+              <label>Custom 3</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_3>
+            <custom_4 translate="label">
+              <label>Custom 4</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_4>
+            <custom_5 translate="label">
+              <label>Custom 5</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_5>
+            <custom_6 translate="label">
+              <label>Custom 6</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>50</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_6>
+            <custom_7 translate="label">
+              <label>Custom 7</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>60</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_7>
+            <custom_8 translate="label">
+              <label>Custom 8</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>70</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_8>
+            <custom_9 translate="label">
+              <label>Custom 9</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>80</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_9>
+            <custom_10 translate="label">
+              <label>Custom 10</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleItemSource</source_model>
+              <sort_order>90</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_10>
+          </fields>
+        </sale_item_attributes>
+        <sale_attributes translate="label">
+          <label>Sale Attributes</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>30</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <custom_1 translate="label">
+              <label>Custom 1</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>0</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_1>
+            <custom_2 translate="label">
+              <label>Custom 2</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_2>
+            <custom_3 translate="label">
+              <label>Custom 3</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_3>
+            <custom_4 translate="label">
+              <label>Custom 4</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_4>
+            <custom_5 translate="label">
+              <label>Custom 5</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_5>
+            <custom_6 translate="label">
+              <label>Custom 6</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>50</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_6>
+            <custom_7 translate="label">
+              <label>Custom 7</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>60</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_7>
+            <custom_8 translate="label">
+              <label>Custom 8</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>70</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_8>
+            <custom_9 translate="label">
+              <label>Custom 9</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>80</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_9>
+            <custom_10 translate="label">
+              <label>Custom 10</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_saleSource</source_model>
+              <sort_order>90</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_10>
+          </fields>
+        </sale_attributes>
+        <customer_attributes translate="label">
+          <label>Customer Attributes</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>40</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <custom_1 translate="label">
+              <label>Custom 1</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>0</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_1>
+            <custom_2 translate="label">
+              <label>Custom 2</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_2>
+            <custom_3 translate="label">
+              <label>Custom 3</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_3>
+            <custom_4 translate="label">
+              <label>Custom 4</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_4>
+            <custom_5 translate="label">
+              <label>Custom 5</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_5>
+            <custom_6 translate="label">
+              <label>Custom 6</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>50</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_6>
+            <custom_7 translate="label">
+              <label>Custom 7</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>60</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_7>
+            <custom_8 translate="label">
+              <label>Custom 8</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>70</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_8>
+            <custom_9 translate="label">
+              <label>Custom 9</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>80</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_9>
+            <custom_10 translate="label">
+              <label>Custom 10</label>
+              <frontend_type>select</frontend_type>
+              <source_model>contiamo/admin_customerSource</source_model>
+              <sort_order>90</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </custom_10>
+          </fields>
+        </customer_attributes>
       </groups>
     </contiamo_settings>
   </sections>

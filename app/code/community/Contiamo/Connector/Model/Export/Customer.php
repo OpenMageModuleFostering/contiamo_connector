@@ -48,4 +48,27 @@ class Contiamo_Connector_Model_Export_Customer
                 return $this->customer->getData($field);
         }
     }
+
+    public function getCustomData($field)
+    {
+        $data = $this->customer->getData($field);
+        // if data is a number, try to get the attribute text (if it exists)
+        if (ctype_digit($data)) {
+            $attr = $this->customer->getResource()->getAttribute($field);
+            try {
+                $attrText = $attr->getSource()->getOptionText($data);
+                // overwrite $data only if attrText has a value
+                if ($attrText) {
+                    if (is_array($attrText)) {
+                        $data = $attrText['label'];
+                    } else {
+                        $data = $attrText;
+                    }
+                }
+            } catch (Mage_Eav_Exception $e) {
+            }
+        }
+
+        return $data;
+    }
 }

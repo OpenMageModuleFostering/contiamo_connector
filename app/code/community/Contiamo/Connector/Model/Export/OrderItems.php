@@ -2,7 +2,7 @@
 
 class Contiamo_Connector_Model_Export_OrderItems extends Contiamo_Connector_Model_Export_Collection
 {
-    protected static $_itemAttributes = array(
+    protected static $_fixedItemAttributes = array(
         'date' => 'created_at',
 
         // unique references
@@ -11,6 +11,7 @@ class Contiamo_Connector_Model_Export_OrderItems extends Contiamo_Connector_Mode
         // product info
         'product_reference'     => 'sku',
         'product_sku'           => 'sku',
+        'product_name'          => 'name',
         'product_brand'         => 'product_brand',
         'product_category'      => 'product_category',
         'product_subcategory'   => 'product_subcategory',
@@ -22,6 +23,19 @@ class Contiamo_Connector_Model_Export_OrderItems extends Contiamo_Connector_Mode
         'net_total'         => 'subtotal',
         'discount_total'    => 'discount_amount'
     );
+
+    public static function customAttributes()
+    {
+        $customAttributes = Mage::getStoreConfig('contiamo_settings/sale_item_attributes');
+        $sorter = function($a, $b) {
+          $a = intval(str_replace('custom_', '', $a));
+          $b = intval(str_replace('custom_', '', $b));
+          return $a - $b;
+        };
+        uksort($customAttributes, $sorter);
+
+        return $customAttributes;
+    }
 
     public function init($dateFrom, $pageNum, $pageSize)
     {

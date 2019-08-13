@@ -16,4 +16,9 @@ class Contiamo_Connector_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getConfig()->getNode()->modules->Contiamo_Connector->version;
     }
+
+    public function snakeCaseToTitle($s)
+    {
+        return ucwords(str_replace('_', ' ', $s));
+    }
 }
